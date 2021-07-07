@@ -1,3 +1,5 @@
 /secrets/*
 /file/*
 /logs/*
+/config/*.key
+/config/*.pem
