@@ -1,5 +1,5 @@
 /secrets/*
-/file/*
+/data/*
 /logs/*
 /config/*.key
 /config/*.pem
