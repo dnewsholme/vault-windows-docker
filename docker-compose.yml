@@ -7,6 +7,6 @@
           - 8080:8200
         volumes:
           - .\config:c:\vault\config
-          - .\file:c:\vault\file
+          - .\data:c:\vault\data
           - .\logs:c:\logs
         restart: unless-stopped

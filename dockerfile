@@ -16,11 +16,8 @@ RUN powershell -Command \
 	mkdir -p c:\vault ; \
 	mkdir -p c:\vault\logs ; \
 	mkdir -p c:\vault\config ; \
-	mkdir -p c:\vault\file ; \
-	cd c:\vault\config ; \
-	c:\Program` Files\OpenSSL-Win64\bin\openssl.exe req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days %CERT_DAYS% -out certificate.pem -subj '%CERT_SUBJECT%' ; \
-	Set-Content -Path c:\vault\config\vault.json -Value '{\"storage\":{\"file\":{\"path\":\"c:\\vault\\file\"}},\"listener\":{\"tcp\":{\"address\":\"%VAULT_ADDRESS%\",\"tls_disable\":\"0\",\"tls_cert_file\":\"c:\\vault\\config\\certificate.pem\",\"tls_key_file\":\"c:\\vault\\config\\key.pem\",\"default_lease_ttl\":\"168h\",\"max_lease_ttl\":\"720h\"}},\"log_level\":\"%VAULT_LOGLEVEL%\",\"ui\":true}'
-
+	mkdir -p c:\vault\data ; \
+	cd c:\vault\config ;
 
 EXPOSE 8200
 
