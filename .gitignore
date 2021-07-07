@@ -3,3 +3,4 @@
 /logs/*
 /config/*.key
 /config/*.pem
+/config/*.cer
